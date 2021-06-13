@@ -1,0 +1,73 @@
+
+strcmp compares two string in ASCIIbetical order
+return type of strcmp is int - <0/==0/>0 Depending upon various cases
+
+Encapsulation - Enclose - Comnbining two data types
+Succinity - Brief and clear
+
+Structure assigned to Data type is called Data Structre.
+
+We can construct our own data Structre too using Encapsulation of two or more different data types.
+like for creating phone book
+
+typedef struct
+{
+	string name;
+	string number;
+}
+person;
+
+Here we have constructed our own data structure named person, for saving a contact with name as well as number.
+but one question here is why number is taken as string and why not int?
+
+1.) if we were to take it as int then long int was required to be of its data type.
+	So, consuming more memory.
+2.) Main thing a no can have hypes,dashes,plus symbol, paranthesis , so to  accomodate such cases, we took string number
+
+int main(void)
+{
+	name = {'Sumit', 'Sachin'}'
+	number = {'+1-14-88-014-900, '+1-21-84-794-104}
+
+	for (int i = 0; i<len(name); i++)
+	{
+		if(strcmp(name[i],Sumit) == 0)
+		{	prinf("%i",number[i]);
+			return 0;
+		}
+	}
+
+}
+// Although code is absolutely correct.
+// But a subtle issue is three
+// Imagine we were to store large no. of contacts then this method will be less useful and will smell called Code smell
+// We will construct our own data type now to find subtle issue and deal with code smell;
+
+int main(void)
+{
+	typedef struct
+	{
+		string name;
+		string number;
+
+	}
+	person;
+
+	person contact_name = 'Sumit'
+	person number = +1-14-88-014-900
+
+	person contact_name = 'Sachin'
+	person number = +1-21-84-794-104
+
+	for (int  i = 0; i<len(contact_name); i++)
+	{
+		if((strcmp(person.contact_name[i]),'Amit') == 0)
+		{
+			printf("%i",person.number)};
+	}
+}
+Here the differnce is that we can acess every stored information in a single line compromising of few word of code
+	whether it be person's - number, email-id, address, credit card info, etc.
+	example- prinf("%c",person.contact_name[1]); // it will print all stored information of person at position 1 while in earlier upper written code , we ned to print each and every info seperately, we need to make plethora of arrays and that too very long.
+
+}

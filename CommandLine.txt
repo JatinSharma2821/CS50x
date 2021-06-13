@@ -1,0 +1,38 @@
+cd
+mv
+
+
+
+ rm --- to remove 
+	rm <file>  -- it will ask for confirmation Y/N?
+	rm -f <file> --- does not ask for confirmation ....
+
+	rm -r <directory> -- deletes directory with confirmation pormpt
+	rm -rf <directory> -- delete directory without confirmation prompt
+
+
+
+
+cd ..
+ls
+pwd - present working directory ---- to check working directory
+mkdir
+cp - to copy
+	cp (source) (destination) ----- for single file
+	cp -r (source) (destination) --- for whole directory -- r stands for recursive
+
+
+l - link
+To study later -
+	chmod
+	ln
+	telnet
+	sudo
+	clear
+	touch
+	rmdir
+	man
+	diff
+	
+
+

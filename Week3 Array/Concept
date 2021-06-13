@@ -1,0 +1,57 @@
+#include<stdio.h>
+
+int main(void)
+{  
+    printf("Hello ,World",;
+}
+
+
+clang -o hello hello.c compiles program  without any error
+
+but 
+#include<stdio.h>
+#include<cs50.h>
+
+int main(void)
+{  
+	string name  = get_string("Enter your name here");
+    printf("Hello ,%s",name);
+}
+here 
+clang -o hello hello.c gives error and does not get reference to get_string;
+so in order to tell clang where get_string exists .. we need to link <cs50.h> library to it
+
+ clang -o hello hello.c -lscs50 /// it works smoothly and tells the compiler to inherit all the functions of cs50 library.
+
+ Compilers compile header file completely and not only the prototypes of our program.|
+ PCs keep header files way before then
+
+ example  -  in above program, all the functions of <stdio.h> will be compiled whilst we are using only printf;
+
+ debug50 -- step over - step in -- step out 
+ Rubber duck debugging	
+
+
+
+ string occupies bytes equal to size of string + 1; 
+ string = HI! ---- 72 73 33 \0
+							\0 tells computer than string has ended
+							\0 is called NUL
+
+
+
+string s = "HI!";
+printf("%i%i%i%i\n", s[0], s[1], s[2], s[3], s[[400]])
+This will give 72 73 33 0 0
+Although it is visible that string donot has any value for index no 400 but stillit prints some value;
+So, to prevent this we should not touch someone else memory
+
+
+int mult(int a, int b); // - a function declartion not defination------   ; tells that whether defination or declartion
+
+int mult(int a, int b)
+{
+	int product = a*b;
+	return product;
+} ///// - its a defination bcz no ; after function name
+
